@@ -24,6 +24,22 @@
             background-color: rgba(0, 0, 0, 0.5);
             display: inline-block;
         }
+        .rainbow-text {
+            font-size: 2em;
+        }
+        .rainbow-text span {
+            animation: rainbow 5s infinite;
+        }
+        @keyframes rainbow {
+            0% { color: red; }
+            14% { color: orange; }
+            28% { color: yellow; }
+            42% { color: green; }
+            57% { color: blue; }
+            71% { color: indigo; }
+            85% { color: violet; }
+            100% { color: red; }
+        }
         form {
             background-color: rgba(0, 0, 0, 0.8);
             padding: 20px;
@@ -46,12 +62,15 @@
         input[type="submit"]:hover {
             background-color: #45a049;
         }
+        .gif {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
     <div class="content">
         <h1>Welcome to Rasmus's Website</h1>
-        <p>Dagens fif: Never stop gambling</p>
+        <p class="rainbow-text"><span>Dagens fif: Never stop gambling</span></p>
         <img src="https://github.com/skfugl/NYSIDE/blob/main/Sk%C3%A6rmbillede%202024-07-03%20141025.png?raw=true" alt="Photo of Rasmus">
         
         <form action="/submit_profile" method="POST">
@@ -61,6 +80,10 @@
             <input type="password" name="password" placeholder="Password" required>
             <input type="submit" value="Create Profile">
         </form>
+    </div>
+    
+    <div class="gif">
+        <img src="https://media4.giphy.com/media/3I05kogbcajmzchPdl/giphy.gif?cid=6104955eqlczqhhacy4mvi3nrasxj99vqlnx1t1mit4j3j46&ep=v1_gifs_translate&rid=giphy.gif&ct=g" alt="Funny GIF">
     </div>
 </body>
 </html>
