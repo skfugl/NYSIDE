@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rasmus's Photo</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap">
     <style>
         body {
             background-image: url('https://github.com/skfugl/NYSIDE/blob/main/image%20(5).png?raw=true');
@@ -11,13 +12,55 @@
             background-repeat: no-repeat;
             color: white;
             text-align: center;
-            padding-top: 20%;
+            font-family: 'Indie Flower', cursive;
+            margin: 0;
+        }
+        .content {
+            padding-top: 10%;
+        }
+        h1, p {
+            margin: 0;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: inline-block;
+        }
+        form {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        input {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 80%;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to Rasmus's Website</h1>
-    <p>Dagens fif: Never stop gambling</p>
-    <img src="https://github.com/skfugl/NYSIDE/blob/main/Sk%C3%A6rmbillede%202024-07-03%20141025.png?raw=true" alt="Photo of Rasmus">
+    <div class="content">
+        <h1>Welcome to Rasmus's Website</h1>
+        <p>Dagens fif: Never stop gambling</p>
+        <img src="https://github.com/skfugl/NYSIDE/blob/main/Sk%C3%A6rmbillede%202024-07-03%20141025.png?raw=true" alt="Photo of Rasmus">
+        
+        <form action="/submit_profile" method="POST">
+            <h2>Create a Profile</h2>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Create Profile">
+        </form>
+    </div>
 </body>
 </html>
